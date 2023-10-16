@@ -10,4 +10,5 @@ export default defineConfig({
   build: {
     outDir: "./tic-tac-toe",
   },
+  base: "/tic-tac-toe/"
 })
