@@ -1,7 +1,13 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./App.sass";
+import propTypes from "prop-types";
 
 function Square({ value, onSquareClick }) {
+  Square.propTypes = {
+    value: propTypes.string,
+    onSquareClick: propTypes.func,
+  };
+
   return (
     <button className="square" onClick={onSquareClick}>
       {value}
@@ -12,7 +18,7 @@ function Square({ value, onSquareClick }) {
 export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
-  
+
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) {
       return;
@@ -27,7 +33,9 @@ export default function Board() {
     setXIsNext(!xIsNext);
   }
   const winner = calculateWinner(squares);
-  let status = winner ? "Player " + winner + " wins" : "Next Player: " + (xIsNext?'X':'O');
+  let status = winner
+    ? "Player " + winner + " wins"
+    : "Next Player: " + (xIsNext ? "X" : "O");
 
   return (
     <div className="wrapper">
@@ -68,7 +76,11 @@ function calculateWinner(squares) {
 
   for (let i = 0; i < lines.length; i++) {
     let [a, b, c] = lines[i];
-    if (squares[a] === squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+    if (
+      squares[a] === squares[a] &&
+      squares[a] === squares[b] &&
+      squares[a] === squares[c]
+    ) {
       return squares[a];
     }
   }
