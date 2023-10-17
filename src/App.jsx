@@ -18,7 +18,7 @@ function Square({ value, onSquareClick }) {
 export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
-
+  
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) {
       return;
@@ -32,6 +32,12 @@ export default function Board() {
     setSquares(newSquares);
     setXIsNext(!xIsNext);
   }
+
+  function resetBoard() {
+    setSquares(Array(9).fill(null));
+    setXIsNext(true);
+  }
+
   const winner = calculateWinner(squares);
   let status = winner
     ? "Player " + winner + " wins"
@@ -59,6 +65,7 @@ export default function Board() {
       </div>
 
       <div className="game-info">{status}</div>
+      <button className="reset-board material-symbols-outlined" onClick={resetBoard}>restart_alt</button>
     </div>
   );
 }

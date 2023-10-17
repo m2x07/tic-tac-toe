@@ -1,5 +1,8 @@
 @import sass/_palette
 
+.material-symbols-outlined
+  font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24
+
 h1
   text-align: center
   font-size: 4.5rem
@@ -43,3 +46,22 @@ h1
   font-weight: 400
   letter-spacing: 2px
   color: $col-foreground
+
+.reset-board
+  width: 6rem
+  height: 4rem
+  display: block
+  margin: auto
+  margin-top: 3rem
+  background-color: $col-accent
+  border: none
+  border-radius: 1rem
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 2.5rem
+  font-weight: 700
+  &:focus
+    outline: none
+  &:active
+    background-color: darken($col-accent, 10%)
