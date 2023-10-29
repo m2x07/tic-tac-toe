@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import './Board.sass';
-import Square from '../Square/Square';
+import "./Board.sass";
+import Square from "../Square/Square";
 
 function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
-  const winnerResult = calculateWinner(squares);
-  
+
   function handleClick(i) {
-    if (squares[i] || winnerResult[0]) {
+    if (squares[i] || calculateWinner(squares)) {
       return;
     }
     const newSquares = squares.slice();
@@ -26,10 +25,8 @@ function Board() {
     setXIsNext(true);
   }
 
-  const winner = winnerResult[0]; 
-  let status = winner
-    ? "Player " + winner + " wins"
-    : "Next Player: " + (xIsNext ? "X" : "O");
+  const winner = calculateWinner(squares);
+  let status = winner ? "Player " + winner + " wins" : "Next Player: " + (xIsNext ? "X" : "O");
 
   return (
     <div className="wrapper">
@@ -53,7 +50,9 @@ function Board() {
       </div>
 
       <div className="game-info">{status}</div>
-      <button className="reset-board material-symbols-outlined" onClick={resetBoard}>restart_alt</button>
+      <button className="reset-board material-symbols-outlined" onClick={resetBoard}>
+        restart_alt
+      </button>
     </div>
   );
 }
@@ -71,12 +70,8 @@ function calculateWinner(squares) {
   ];
   for (let i = 0; i < lines.length; i++) {
     let [a, b, c] = lines[i];
-    if (
-      squares[a] === squares[a] &&
-      squares[a] === squares[b] &&
-      squares[a] === squares[c]
-    ) {
-      return [squares[a], lines[i]];
+    if (squares[a] === squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
     }
   }
   return null;
