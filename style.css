@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.neumorphic-shadow {
+	background: #242424;
+	box-shadow: 7px 7px 14px #1C1C1C, -7px -7px 14px #2C2C2C;
+}
+.neumorphic-shadow-inset {
+	background: #242424;
+	box-shadow: inset 6px 6px 12px #1C1C1C, inset -6px -6px 12px #2C2C2C;
+}
+
