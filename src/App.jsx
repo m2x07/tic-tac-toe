@@ -1,6 +1,6 @@
-import "./App.sass";
-import Board from "./components/Board/Board";
-import Footer from "./components/Footer/Footer";
+// import "./App.sass";
+import Board from "./components/Board";
+import Footer from "./components/Footer";
 
 function App() {
   return (
