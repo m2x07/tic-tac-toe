@@ -57,6 +57,8 @@ function Board() {
         {status}
       </div>
       <button
+        // * Here, blue color is the one added by extending tailwind's config. not the tailwind's default one.
+        // * Same goes for all the components. TODO: Fix color naming
         className="reset-board bg-blue-400 active:bg-blue-500 m-auto mt-5 flex h-10 w-1/4 items-center justify-center rounded-md text-lg text-black focus:outline-none"
         onClick={resetBoard}
       >
