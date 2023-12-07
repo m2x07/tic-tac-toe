@@ -14,7 +14,7 @@ export default {
       colors: {
         black: "#242424",
         white: '#FBFFFE',
-        blue: {
+        dodgerBlue: {
           400: "#0099FF",
           500: "#008CEA"
         },

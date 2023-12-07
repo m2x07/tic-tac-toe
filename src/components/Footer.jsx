@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="absolute bottom-2 left-0 right-0 block text-center">
       by{" "}
       <a
-        className="text-blue-400 underline underline-offset-4"
+        className="text-dodgerBlue-400 underline underline-offset-4"
         href="https://twitter.com/_m2x07"
         target="_blank"
         rel="noopener noreferrer"
@@ -15,7 +15,7 @@ export default function Footer() {
       {" | "}
       view on{" "}
       <a
-        className="text-blue-400 underline underline-offset-4"
+        className="text-dodgerBlue-400 underline underline-offset-4"
         href="http://github.com/m2x07/tic-tac-toe"
         target="_blank"
         rel="noopener noreferrer"
