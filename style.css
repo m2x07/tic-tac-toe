@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 .neumorphic-shadow {
-	background: #242424;
 	box-shadow:
-		7px 7px 14px #1c1c1c,
-		-7px -7px 14px #2c2c2c;
+		14px 14px 30px #171717,
+		-14px -14px 30px #232323;
 }
 .neumorphic-shadow-inset {
-	background: #242424;
 	box-shadow:
-		inset 6px 6px 12px #1c1c1c,
-		inset -6px -6px 12px #2c2c2c;
+		inset 6px 6px 12px #171717,
+		inset -6px -6px 12px #232323;
+}
+.neumorphic-shadow-small {
+	border-radius: 10px;
+	background: #1d1d1d;
+	box-shadow:
+		4px 4px 8px #171717,
+		-4px -4px 8px #232323;
 }

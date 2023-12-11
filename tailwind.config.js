@@ -8,7 +8,8 @@ export default {
 		},
 		extend: {
 			colors: {
-				black: "#242424",
+				// black: "#242424",
+				black: "#1d1d1d",
 				white: "#FBFFFE",
 				dodgerBlue: {
 					400: "#0099FF",

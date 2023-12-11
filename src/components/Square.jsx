@@ -17,7 +17,7 @@ function Square({ value, onSquareClick }) {
 	}
 	return (
 		<button
-			className="neumorphic-shadow-inset m-1 flex h-20  w-20 items-center justify-center rounded-lg font-display text-[length:38px] tracking-tighter"
+			className="neumorphic-shadow-inset m-1 flex h-20 w-20 items-center justify-center rounded-lg bg-black font-display text-[length:38px] tracking-tighter"
 			onClick={onSquareClick}>
 			{icon}
 		</button>

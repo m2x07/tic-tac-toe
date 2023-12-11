@@ -29,8 +29,8 @@ function Board() {
 
 	const winner = calculateWinner(squares);
 	return (
-		<div className="neumorphic-shadow h-fit rounded-xl p-5">
-			<h1 className="m-0 text-center font-display text-[45px] font-semibold tracking-wide">
+		<div className="neumorphic-shadow bg-black h-fit rounded-2xl p-5">
+			<h1 className="m-0 text-center font-display text-[45px] font-medium tracking-wider">
 				Tic Tac Toe
 			</h1>
 			<div className="board-wrapper my-2 block w-fit">
