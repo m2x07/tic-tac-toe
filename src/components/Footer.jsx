@@ -26,16 +26,22 @@ export default function Footer() {
 				href="https://github.com/m2x07/tic-tac-toe"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="relative mx-3 neumorphic-shadow-small github justify-center p-3">
-				<IconBrandGithubFilled size={18} className="inline-block relative -top-0.5" />
+				className="neumorphic-shadow-small transition-color github relative mx-3 justify-center p-3 text-slate-400 duration-300 hover:text-white">
+				<IconBrandGithubFilled
+					size={18}
+					className="relative -top-0.5 inline-block"
+				/>
 				<span className="ml-1.5 text-sm tracking-wide">Github</span>
 			</a>
 			<a
 				href="https://twitter.com/_m2x07"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="relative mx-3 neumorphic-shadow-small github justify-center p-3">
-				<IconBrandTwitterFilled size={18} className="inline-block relative -top-0.5" />
+				className="neumorphic-shadow-small transition-color github relative mx-3 justify-center p-3 text-slate-400 duration-300 hover:text-white">
+				<IconBrandTwitterFilled
+					size={18}
+					className="relative -top-0.5 inline-block"
+				/>
 				<span className="ml-1.5 text-sm tracking-wide">Twitter</span>
 			</a>
 		</footer>
